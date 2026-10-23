@@ -29,7 +29,8 @@ mapa_renomeacao = {
     "AreaAvaliacao": "NM_AREA_AVALIACAO"
 }
 
-caminho_arquivos = "/home/helen/codigos/catalogos-capes/dados_capes/*.csv"
+# Caminho relativo apontando para os dados brutos baixados pelo outro script
+caminho_arquivos = "./data/brutos/*.csv"
 arquivos = glob.glob(caminho_arquivos)
 dataframes = []
 
@@ -64,9 +65,12 @@ if dataframes:
     df_kdd = df_kdd.dropna(subset=['DS_RESUMO'])
     df_kdd = df_kdd.drop_duplicates(subset=['DS_RESUMO', 'NM_PRODUCAO'])
     
-    df_kdd.to_csv("dados_capes_computacao_2010_2024.csv", index=False, encoding='utf-8')
+    # Salva o arquivo limpo diretamente na pasta data
+    caminho_saida = "./data/dados_capes_computacao_2010_2024.csv"
+    df_kdd.to_csv(caminho_saida, index=False, encoding='utf-8')
     
     print(f"\nProcessamento concluído com sucesso!")
     print(f"Total de trabalhos (Mestrado/Doutorado) retidos para a IA: {len(df_kdd)}")
+    print(f"Arquivo salvo em: {caminho_saida}")
 else:
     print("Nenhum dado encontrado.")

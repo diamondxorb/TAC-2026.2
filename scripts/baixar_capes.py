@@ -2,7 +2,9 @@ import os
 import re
 from catalogos_capes import datasets
 
-os.makedirs("./dados_capes", exist_ok=True)
+# Cria a pasta data/brutos automaticamente se ela não existir
+diretorio_destino = "./data/brutos"
+os.makedirs(diretorio_destino, exist_ok=True)
 
 print("Consultando o portal da CAPES...")
 df = datasets.get_all_datasets_with_resources() 
@@ -21,20 +23,20 @@ for url in df_teses['url']:
         
         # Verifica se o ano está dentro do recorte da pesquisa
         if 2010 <= ano <= 2024:
-            caminho_arquivo = os.path.join("./dados_capes", nome_arquivo)
+            caminho_arquivo = os.path.join(diretorio_destino, nome_arquivo)
             
             # Checa se o arquivo já foi baixado anteriormente
             if os.path.exists(caminho_arquivo):
                 print(f"Pulando (já baixado): {nome_arquivo}")
             else:
                 print(f"Baixando ano {ano}: {url}")
-                datasets.download_file(url, "./dados_capes")
+                datasets.download_file(url, diretorio_destino)
         else:
             print(f"Pulando ano {ano} (fora do recorte 2010-2024): {nome_arquivo}")
             
     else:
         # Caso algum arquivo não tenha o ano no nome, baixa por precaução
         print(f"Atenção: Não foi possível identificar o ano no arquivo {nome_arquivo}. Baixando...")
-        datasets.download_file(url, "./dados_capes")
+        datasets.download_file(url, diretorio_destino)
 
 print("Processo finalizado!")
