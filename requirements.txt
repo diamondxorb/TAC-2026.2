@@ -1,2 +1,5 @@
 git+https://github.com/ApoenaX/catalogos-capes.git
 pandas
+spacy
+matplotlib
+seaborn
