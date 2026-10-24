@@ -5,7 +5,7 @@ Este repositório contém a esteira de dados e as análises para o mapeamento lo
 ## Estrutura do Projeto
 * `data/`: Armazena a base de dados consolidada e pré-processada.
 * `scripts/`: Códigos Python para extração automatizada e limpeza dos dados governamentais.
-* `notebooks/`: Arquivos Jupyter com as etapas de modelagem de tópicos (BERTopic, LDA) e classificação supervisionada (Random Forest, GBM, SVM).
+* `notebooks/`: Arquivos Jupyter com as etapas de pré-processamento de NLP, modelagem de tópicos (BERTopic, LDA) e classificação supervisionada (Random Forest, GBM, SVM).
 
 ## Pré-requisitos e Configuração do Ambiente
 Para garantir a reprodutibilidade, recomenda-se a utilização de um ambiente virtual Python isolado.
@@ -25,6 +25,11 @@ source venv/bin/activate
 3. Instale as dependências externas:
 ```bash
 pip install -r requirements.txt
+```
+
+4. Baixe o modelo de linguagem em português do spaCy (necessário para a etapa de lematização):
+```bash
+python -m spacy download pt_core_news_sm
 ```
 
 ## Execução da Coleta e Limpeza de Dados

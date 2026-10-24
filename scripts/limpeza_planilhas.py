@@ -66,8 +66,8 @@ if dataframes:
     df_kdd = df_kdd.drop_duplicates(subset=['DS_RESUMO', 'NM_PRODUCAO'])
     
     # Salva o arquivo limpo diretamente na pasta data
-    caminho_saida = "./data/dados_capes_computacao_2010_2024.csv"
-    df_kdd.to_csv(caminho_saida, index=False, encoding='utf-8')
+    caminho_saida = "./data/dados_capes_computacao_2010_2024.csv.gz"
+    df_kdd.to_csv(caminho_saida, index=False, encoding='utf-8', compression='gzip')
     
     print(f"\nProcessamento concluído com sucesso!")
     print(f"Total de trabalhos (Mestrado/Doutorado) retidos para a IA: {len(df_kdd)}")
