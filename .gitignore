@@ -1,4 +1,6 @@
 data/brutos/
+data/*csv
+data/*.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -220,4 +222,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-data/*csv

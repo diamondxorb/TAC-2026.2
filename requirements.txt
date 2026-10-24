@@ -1,5 +1,13 @@
-git+https://github.com/ApoenaX/catalogos-capes.git
+--extra-index-url https://download.pytorch.org/whl/cpu
+jupyter
 pandas
 spacy
 matplotlib
 seaborn
+bertopic
+sentence-transformers
+umap-learn
+hdbscan
+plotly
+scikit-learn
+torch
