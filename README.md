@@ -5,7 +5,7 @@ Este repositório contém a esteira de dados e as análises para o mapeamento lo
 ## Estrutura do Projeto
 * `data/`: Armazena a base de dados consolidada e compactada (formato `.csv.gz`), pronta para análise.
 * `scripts/`: Códigos Python para extração automatizada e limpeza dos dados governamentais.
-* `notebooks/`: Arquivos Jupyter com as etapas de pré-processamento de NLP, modelagem de tópicos (BERTopic, LDA) e classificação supervisionada (Random Forest, GBM, SVM).
+* `notebooks/`: Arquivos Jupyter com as etapas de pré-processamento de NLP, modelagem de tópicos (BERTopic) e classificação supervisionada (Random Forest e SVM).
 
 ## Pré-requisitos e Configuração do Ambiente
 Para garantir a reprodutibilidade, recomenda-se a utilização de um ambiente virtual Python isolado.
@@ -41,6 +41,7 @@ jupyter notebook
 Acesse a pasta `notebooks/` no seu navegador e execute os arquivos sequencialmente:
 1. `01_pre_processamento_nlp.ipynb`: Limpeza profunda e lematização dos resumos.
 2. `02_modelagem_topicos.ipynb`: Aplicação do BERTopic, geração de embeddings e gráficos de evolução temporal.
+3. `03_classificacao_supervisionada.ipynb`: Treinamento de Random Forest e SVM para identificar automaticamente teses de IA, com extração das palavras mais discriminantes (Feature Importance).
 
 ## Coleta e Limpeza de Dados (Opcional)
 Se você deseja auditar ou recriar a base de dados do zero a partir do portal da CAPES, siga os passos abaixo. 
