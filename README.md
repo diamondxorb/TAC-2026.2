@@ -1,11 +1,11 @@
 # Evolução Temática da Produção Científica em Computação no Brasil (2010-2024)
 
-Este repositório contém a esteira de dados e as análises para o mapeamento longitudinal da produção científica na pós-graduação brasileira. O projeto aplica o processo de *Knowledge Discovery in Databases* (KDD), modelagem neural de tópicos e algoritmos de classificação nos microdados abertos da CAPES para rastrear a ascensão de áreas como Inteligência Artificial e Aprendizado de Máquina.
+Este repositório contém a esteira de dados e as análises para o mapeamento longitudinal da produção científica na pós-graduação brasileira. O projeto aplica o processo de *Knowledge Discovery in Databases* (KDD), modelagem neural de tópicos (BERTopic) e algoritmos de machine learning nos microdados abertos da CAPES para rastrear a ascensão da Inteligência Artificial.
 
 ## Estrutura do Projeto
-* `data/`: Armazena a base de dados consolidada e compactada (formato `.csv.gz`), pronta para análise.
-* `scripts/`: Códigos Python para extração automatizada e limpeza dos dados governamentais.
-* `notebooks/`: Arquivos Jupyter com as etapas de pré-processamento de NLP, modelagem de tópicos (BERTopic) e classificação supervisionada (Random Forest e SVM).
+* `data/`: Base consolidada (`.csv.gz`). Contém as subpastas automáticas `resultados/` (para métricas e planilhas) e `figuras/` (para os gráficos exportados no padrão SBC).
+* `scripts/`: Códigos Python para extração de dados brutos e o módulo do dicionário especialista (`lexico_ia.py`).
+* `notebooks/`: Arquivos Jupyter contendo as 4 etapas metodológicas do estudo (NLP, Modelagem Não-Supervisionada, Estatística e Classificação Supervisionada).
 
 ## Pré-requisitos e Configuração do Ambiente
 Para garantir a reprodutibilidade, recomenda-se a utilização de um ambiente virtual Python isolado.
@@ -27,39 +27,29 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Baixe o modelo de linguagem em português do spaCy (necessário para a etapa de lematização no notebook 01):
+4. Baixe o modelo de linguagem em português do spaCy:
 ```bash
 python -m spacy download pt_core_news_sm
 ```
 
 ## Execução das Análises
-Como as bases de dados já estão limpas e compactadas na pasta `data/`, você pode ir direto para as análises metodológicas. Basta iniciar o servidor do Jupyter:
+Acesse a pasta `notebooks/` iniciando o servidor com `jupyter notebook` e execute os arquivos sequencialmente:
 
-```bash
-jupyter notebook
-```
-Acesse a pasta `notebooks/` no seu navegador e execute os arquivos sequencialmente:
-1. `01_pre_processamento_nlp.ipynb`: Limpeza profunda e lematização dos resumos.
-2. `02_modelagem_topicos.ipynb`: Aplicação do BERTopic, geração de embeddings e gráficos de evolução temporal.
-3. `03_classificacao_supervisionada.ipynb`: Treinamento de Random Forest e SVM para identificar automaticamente teses de IA, com extração das palavras mais discriminantes (Feature Importance).
+1. **`01_pre_processamento_nlp.ipynb`**: Limpeza profunda e lematização dos resumos.
+2. **`02_modelagem_topicos.ipynb`**: Clusterização semântica via BERTopic e benchmarking não-supervisionado de coerência (NPMI) e diversidade contra o modelo clássico LDA.
+3. **`03_analise_estatistica_longitudinal.ipynb`**: Rotulagem léxica transversal de IA, detecção de mudança de regime estrutural (PELT e Teste de Chow), testes Qui-quadrado, Regressão Logística, Índice de Gini por instituição e exportação das Figuras 2, 3 e 4.
+4. **`04_classificacao_supervisionada.ipynb`**: Treinamento de Random Forest, GBM e SVM Linear utilizando mascaramento dos termos-semente (*data leakage prevention*), validação de generalização temporal e extração do vocabulário de contexto (Figura 5).
 
 ## Coleta e Limpeza de Dados (Opcional)
-Se você deseja auditar ou recriar a base de dados do zero a partir do portal da CAPES, siga os passos abaixo. 
-
-**Nota:** O pacote de extração foi removido do `requirements.txt` padrão para manter o ambiente leve. Instale-o manualmente primeiro:
+Se você deseja auditar ou recriar a base de dados do zero a partir do portal da CAPES, instale o pacote de extração manualmente:
 ```bash
 pip install git+https://github.com/diamondxorb/catalogos-capes.git
 ```
 
-Em seguida, execute os scripts sequencialmente:
-1. **Download:** Extrai os pacotes CSV anuais diretamente do portal da CAPES.
-```bash
-python scripts/baixar_capes.py
-```
-2. **Consolidação:** Filtra os trabalhos da área de Avaliação "Ciência da Computação", padroniza colunas, remove anomalias e gera a versão `.csv.gz`.
-```bash
-python scripts/limpeza_planilhas.py
-```
+Em seguida, execute os scripts na ordem:
+1. **Download:** `python scripts/baixar_capes.py`
+2. **Consolidação:** `python scripts/limpeza_planilhas.py`
+3. **Atualização 2024:** `python scripts/atualizar_base_2024.py`
 
 ## Autoria
 * **Júlia Paulo Amorim** (Universidade de Brasília)
