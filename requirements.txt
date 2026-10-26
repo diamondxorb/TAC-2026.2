@@ -11,3 +11,4 @@ hdbscan
 plotly
 scikit-learn
 torch
+openpyxl
