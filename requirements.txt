@@ -12,3 +12,5 @@ plotly
 scikit-learn
 torch
 openpyxl
+ruptures
+statsmodels

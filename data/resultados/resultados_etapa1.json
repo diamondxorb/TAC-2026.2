@@ -1,0 +1,520 @@
+{
+ "n_2024": 1721,
+ "n_topicos_ate_2023": 22130,
+ "n_bruto": 23897,
+ "n_modelagem": 23851,
+ "anos": [
+  2010,
+  2024
+ ],
+ "n_ies": 92,
+ "ia_total": 7929,
+ "ia_pct": 33.24,
+ "grau_n": {
+  "Mestrado acadêmico": 17196,
+  "Doutorado": 4668,
+  "Mestrado profissional": 1987
+ },
+ "regiao_n": {
+  "Sudeste": 10162,
+  "Nordeste": 6956,
+  "Sul": 4723,
+  "Centro-Oeste": 1203,
+  "Norte": 807
+ },
+ "pelt": {
+  "nivel_l2": {
+   "0.5": [
+    2013,
+    2018,
+    2021
+   ],
+   "1": [
+    2013,
+    2018,
+    2021
+   ],
+   "2": [
+    2013,
+    2018,
+    2021
+   ],
+   "4": [
+    2013,
+    2018,
+    2021
+   ]
+  },
+  "tendencia_linear": {
+   "0.5": [
+    2018,
+    2022
+   ],
+   "1": [
+    2018,
+    2022
+   ],
+   "2": [
+    2018
+   ],
+   "4": [
+    2018
+   ]
+  }
+ },
+ "pelt_pen_bic": 3.607061489128847,
+ "sigma": 0.8160812872230989,
+ "changepoint": [
+  2018,
+  2022
+ ],
+ "segmentos": [
+  {
+   "inicio": 2010,
+   "fim": 2017,
+   "inclinacao_pp_ano": 1.22,
+   "p": 9.604217802188968e-06,
+   "media": 23.4
+  },
+  {
+   "inicio": 2018,
+   "fim": 2021,
+   "inclinacao_pp_ano": 4.14,
+   "p": 0.015329956273900658,
+   "media": 38.8
+  },
+  {
+   "inicio": 2022,
+   "fim": 2024,
+   "inclinacao_pp_ano": 2.56,
+   "p": 0.050889202608148464,
+   "media": 49.5
+  }
+ ],
+ "tendencia_global": {
+  "inclinacao": 2.51,
+  "r2": 0.946,
+  "p": 1.230341038548438e-09
+ },
+ "chow": {
+  "F": 46.92,
+  "p": 4.117668578884626e-06,
+  "ano": 2018
+ },
+ "ia_inicio_fim": {
+  "p2010": 19.7,
+  "p_ultimo": 51.9,
+  "ultimo_ano": 2024,
+  "chi2_p": 3.693674531031768e-68
+ },
+ "dl": {
+  "pct_ia_2010": 0.4,
+  "pct_ia_2017": 7.9,
+  "pct_ia_ultimo": 37.2,
+  "pct_ia_2023": 32.0,
+  "pct_corpus_2010": 0.1,
+  "pct_corpus_ultimo": 19.3
+ },
+ "n_topicos_alta_sig": 6,
+ "n_topicos_queda_sig": 5,
+ "testes": {
+  "GRAU_x_IA": {
+   "chi2": 51.5,
+   "gl": 2,
+   "p": 6.5187796321588374e-12,
+   "V": 0.046,
+   "pct_ia": {
+    "Doutorado": 35.4,
+    "Mestrado acadêmico": 33.5,
+    "Mestrado profissional": 26.4
+   },
+   "n": {
+    "Doutorado": 4668,
+    "Mestrado acadêmico": 17196,
+    "Mestrado profissional": 1987
+   },
+   "ic95": {
+    "Doutorado": [
+     34.0,
+     36.8
+    ],
+    "Mestrado acadêmico": [
+     32.8,
+     34.2
+    ],
+    "Mestrado profissional": [
+     24.5,
+     28.4
+    ]
+   },
+   "residuos": {
+    "Doutorado": 3.4,
+    "Mestrado acadêmico": 1.1,
+    "Mestrado profissional": -6.7
+   }
+  },
+  "GRAU_x_TOPICO": {
+   "chi2": 315.0,
+   "gl": 30,
+   "p": 2.8421454926328142e-49,
+   "V": 0.084,
+   "destaques": {
+    "Doutorado": {
+     "sobre": [
+      [
+       "Energia elétrica",
+       6.2
+      ],
+      [
+       "Jogos digitais",
+       5.8
+      ],
+      [
+       "Dispositivos móveis",
+       4.1
+      ]
+     ],
+     "sub": [
+      [
+       "Engenharia de software e testes",
+       -4.8
+      ],
+      [
+       "Web e serviços web",
+       -3.4
+      ],
+      [
+       "Cidades inteligentes e transporte",
+       -2.6
+      ]
+     ]
+    },
+    "Mestrado acadêmico": {
+     "sobre": [
+      [
+       "Web e serviços web",
+       3.1
+      ],
+      [
+       "Redes sociais",
+       2.9
+      ],
+      [
+       "Computação em nuvem",
+       2.9
+      ]
+     ],
+     "sub": [
+      [
+       "Cidades inteligentes e transporte",
+       -3.0
+      ],
+      [
+       "Genérico: modelos, algoritmos e aprendizagem",
+       -2.9
+      ],
+      [
+       "Energia elétrica",
+       -2.8
+      ]
+     ]
+    },
+    "Mestrado profissional": {
+     "sobre": [
+      [
+       "Cidades inteligentes e transporte",
+       8.5
+      ],
+      [
+       "Genérico: modelos, algoritmos e aprendizagem",
+       4.2
+      ],
+      [
+       "Engenharia de software e testes",
+       3.0
+      ]
+     ],
+     "sub": [
+      [
+       "Computação em saúde",
+       -4.9
+      ],
+      [
+       "Jogos digitais",
+       -4.6
+      ],
+      [
+       "Energia elétrica",
+       -4.3
+      ]
+     ]
+    }
+   }
+  },
+  "REGIAO_x_IA": {
+   "chi2": 24.2,
+   "gl": 4,
+   "p": 7.423690390626074e-05,
+   "V": 0.032,
+   "pct_ia": {
+    "Centro-Oeste": 36.5,
+    "Nordeste": 31.1,
+    "Norte": 35.3,
+    "Sudeste": 34.0,
+    "Sul": 33.5
+   },
+   "n": {
+    "Centro-Oeste": 1203,
+    "Nordeste": 6956,
+    "Norte": 807,
+    "Sudeste": 10162,
+    "Sul": 4723
+   },
+   "ic95": {
+    "Centro-Oeste": [
+     33.8,
+     39.3
+    ],
+    "Nordeste": [
+     30.1,
+     32.2
+    ],
+    "Norte": [
+     32.1,
+     38.7
+    ],
+    "Sudeste": [
+     33.1,
+     35.0
+    ],
+    "Sul": [
+     32.1,
+     34.8
+    ]
+   },
+   "residuos": {
+    "Centro-Oeste": 2.5,
+    "Nordeste": -4.4,
+    "Norte": 1.3,
+    "Sudeste": 2.2,
+    "Sul": 0.3
+   }
+  },
+  "REGIAO_x_TOPICO": {
+   "chi2": 617.7,
+   "gl": 60,
+   "p": 1.4759846852399645e-93,
+   "V": 0.084,
+   "destaques": {
+    "Centro-Oeste": {
+     "sobre": [
+      [
+       "Computação em saúde",
+       9.8
+      ],
+      [
+       "Bioinformática",
+       2.8
+      ],
+      [
+       "Cidades inteligentes e transporte",
+       1.8
+      ]
+     ],
+     "sub": [
+      [
+       "Genérico: modelos, algoritmos e aprendizagem",
+       -2.4
+      ],
+      [
+       "Computação em nuvem",
+       -2.2
+      ],
+      [
+       "Jogos digitais",
+       -2.1
+      ]
+     ]
+    },
+    "Nordeste": {
+     "sobre": [
+      [
+       "Cidades inteligentes e transporte",
+       6.6
+      ],
+      [
+       "Engenharia de software e testes",
+       4.1
+      ],
+      [
+       "Redes sociais",
+       3.0
+      ]
+     ],
+     "sub": [
+      [
+       "Computação em saúde",
+       -9.8
+      ],
+      [
+       "Jogos digitais",
+       -7.3
+      ],
+      [
+       "Dispositivos móveis",
+       -3.5
+      ]
+     ]
+    },
+    "Norte": {
+     "sobre": [
+      [
+       "Agricultura e meio ambiente",
+       3.1
+      ],
+      [
+       "Genérico: modelos, algoritmos e aprendizagem",
+       2.3
+      ],
+      [
+       "Web e serviços web",
+       2.0
+      ]
+     ],
+     "sub": [
+      [
+       "Engenharia de software e testes",
+       -3.6
+      ],
+      [
+       "Energia elétrica",
+       -3.1
+      ],
+      [
+       "Jogos digitais",
+       -3.1
+      ]
+     ]
+    },
+    "Sudeste": {
+     "sobre": [
+      [
+       "Jogos digitais",
+       12.0
+      ],
+      [
+       "Computação em saúde",
+       5.2
+      ],
+      [
+       "Reconhecimento facial e biometria",
+       4.9
+      ]
+     ],
+     "sub": [
+      [
+       "Engenharia de software e testes",
+       -6.0
+      ],
+      [
+       "Cidades inteligentes e transporte",
+       -5.6
+      ],
+      [
+       "Redes e Internet das Coisas",
+       -3.1
+      ]
+     ]
+    },
+    "Sul": {
+     "sobre": [
+      [
+       "Dispositivos móveis",
+       6.6
+      ],
+      [
+       "Engenharia de software e testes",
+       4.0
+      ],
+      [
+       "Agricultura e meio ambiente",
+       2.1
+      ]
+     ],
+     "sub": [
+      [
+       "Jogos digitais",
+       -4.0
+      ],
+      [
+       "Robótica",
+       -3.3
+      ],
+      [
+       "Reconhecimento facial e biometria",
+       -1.5
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "logit": {
+  "Intercept": {
+   "OR": 0.21,
+   "lo": 0.195,
+   "hi": 0.225,
+   "p": 0.0
+  },
+  "Grau: Doutorado": {
+   "OR": 0.934,
+   "lo": 0.871,
+   "hi": 1.002,
+   "p": 0.057037667668419355
+  },
+  "Grau: Mestrado profissional": {
+   "OR": 0.624,
+   "lo": 0.559,
+   "hi": 0.697,
+   "p": 7.753725768833344e-17
+  },
+  "Região: Centro-Oeste": {
+   "OR": 1.126,
+   "lo": 0.988,
+   "hi": 1.283,
+   "p": 0.07532914298415616
+  },
+  "Região: Nordeste": {
+   "OR": 0.923,
+   "lo": 0.862,
+   "hi": 0.989,
+   "p": 0.022066410863000024
+  },
+  "Região: Norte": {
+   "OR": 1.02,
+   "lo": 0.874,
+   "hi": 1.19,
+   "p": 0.80240359382165
+  },
+  "Região: Sul": {
+   "OR": 0.973,
+   "lo": 0.902,
+   "hi": 1.049,
+   "p": 0.47790233926257053
+  },
+  "ANO_C": {
+   "OR": 1.13,
+   "lo": 1.122,
+   "hi": 1.138,
+   "p": 5.696312774590782e-257
+  }
+ },
+ "logit_pseudo_r2": 0.043,
+ "gini": {
+  "regioes_total": 0.4103,
+  "regioes_ia": 0.4074,
+  "ies_total": 0.5603,
+  "ies_ia": 0.5261,
+  "ies_outras": 0.5906
+ }
+}
