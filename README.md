@@ -40,6 +40,14 @@ Acesse a pasta `notebooks/` iniciando o servidor com `jupyter notebook` e execut
 3. **`03_analise_estatistica_longitudinal.ipynb`**: Rotulagem léxica transversal de IA, detecção de mudança de regime estrutural (PELT e Teste de Chow), testes Qui-quadrado, Regressão Logística, Índice de Gini por instituição e exportação das Figuras 2, 3 e 4.
 4. **`04_classificacao_supervisionada.ipynb`**: Treinamento de Random Forest, GBM e SVM Linear utilizando mascaramento dos termos-semente (*data leakage prevention*), validação de generalização temporal e extração do vocabulário de contexto (Figura 5).
 
+## Principais Resultados
+Nossa análise revelou uma mudança de regime estrutural na produção de IA no Brasil, com uma concentração institucional significativa. Além disso, os modelos supervisionados demonstraram que a IA possui uma assinatura vocabular de contexto própria, independente dos termos de busca óbvios.
+
+<p align="center">
+  <img src="data/figuras/fig_evolucao_ia.png" width="48%">
+  <img src="data/figuras/fig_classificacao.png" width="48%">
+</p>
+
 ## Coleta e Limpeza de Dados (Opcional)
 Se você deseja auditar ou recriar a base de dados do zero a partir do portal da CAPES, instale o pacote de extração manualmente:
 ```bash
